@@ -10,6 +10,7 @@ git:
 
 * git clone
 * git branch
+* git checkout <name>
 * git checkout -b dev origin/dev
 * git add 
 * git commit -m " "
