@@ -3,6 +3,5 @@ Bigeye structure optimization
 
 Branch:
 
-|master: public version 
-
-|dev: develop
+* master: public version 
+* dev: develop
