@@ -28,6 +28,14 @@ class EncoderDecoder(InputOutput):
                              "method should be one of the following strings:"
                              " 'linear', 'exponetial' ,'weights'" %
                              method)
+    def encoding(self,phi,method='linear'):
+        if method == 'linear':
+            self._linear_encoding(phi)
+        else:
+            raise ValueError("no such method: '%s'. Please check your setting!"
+                             "method should be one of the following strings:"
+                             " 'linear', 'exponetial' ,'weights'" %
+                             method)
 
     def _linear_init(self):
         assert len(self.phi_min) == len(self.phi_max)
@@ -41,12 +49,11 @@ class EncoderDecoder(InputOutput):
                 n = np.ceil(delta * 1.0 / step)
             else:
                 n = 0
-            coding = [0,] * n
-            self.encoding_set.append(coding)
+            n = int(n)
             self.encoding_length.append(n)
             self.phi_max_offset.append(n * step - delta)
             self.delta_phi.append(max(n * step, 0))
-        for i in len(self.phi_min):
+        for i in range(len(self.phi_min)):
             for j in range(self.encoding_length[i]):
                 e = {}
                 e['index'] = i
@@ -84,9 +91,8 @@ class EncoderDecoder(InputOutput):
     def name_to_phi(self,phi_name):
         return map(int, phi_name.split('_'))
 
-
 if __name__ == '__main__':
     print 'start'
     ED_MODULE = EncoderDecoder('faster_rcnn_end2end.yml')
-    ED_MODULE.encoding(method='linear')
+    ED_MODULE.init_setting(method='linear')
     print 'end'
