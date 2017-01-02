@@ -14,7 +14,7 @@ class Optimization:
         self.budget = budget
 
     def run(self):
-
+        for 
 
         # [p, t] = get_set_p_and_t(set)
         # deltaX = get_deltaX_minus()  get_deltaX_divide()
