@@ -26,17 +26,7 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.6.9 (/System/Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6)" project-jdk-type="Python SDK" />
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <console-settings is-module-sdk="true">
-        <option name="myUseModuleSdk" value="true" />
-      </console-settings>
-    </option>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
-  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 2.7.6 (sftp://huwenzheng@166.111.72.85:22/usr/bin/python)" project-jdk-type="Python SDK" />
   <component name="masterDetails">
     <states>
       <state key="ScopeChooserConfigurable.UI">
